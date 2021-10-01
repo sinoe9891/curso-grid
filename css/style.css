@@ -1,20 +1,20 @@
 :root {
-    --azul: #0071b7;
+    --fondo: #2c3e50;
     --blanco: #FFF;
-    --naranja: #ff4f1e;
+    --box: #9b59b6;
 }
 html {
     font-size: 62.5%; /** 1REM = 10pX **/
 }
 
 body {
-    background-color: var(--azul);
+    background-color: var(--fondo);
     font-family:  'Lato', sans-serif;
     font-size: 1.6rem;
 }
 
 .caja-curso {
-    background-color: var(--naranja);
+    background-color: var(--box);
     text-align: center;
     color: var(--blanco);
     padding: 5rem;
@@ -47,7 +47,7 @@ h1, h2 {
     margin: 0 auto;
 }
 .box {
-    background-color: var(--naranja);
+    background-color: var(--box);
     color: var(--blanco);
     padding: 5rem;
     display: flex;
