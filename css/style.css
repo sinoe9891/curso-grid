@@ -56,3 +56,52 @@ h1, h2 {
     font-size: 4rem;
     margin-bottom: 2rem;
 }
+
+.grid-1{
+	display: grid;
+}
+
+/* Grid Template columns */
+.grid-2{
+	display: grid;
+	grid-template-columns: 300px 300px 300px; 
+}
+.grid-2 .box:nth-child(2){
+	/* La posición del elemento 2 quiero que inicie desde la posición 1 y termine en 2 */
+	/* grid-column-start: 1;
+	grid-column-end: 2; */
+	/* También se puede así con Shorthand */
+	grid-column:1 / 2;
+}
+
+/* Grid Template Rows */
+.grid-3{
+	display: grid;
+}
+.grid-4{
+	display: grid;
+}
+.grid-5{
+	display: grid;
+}
+.grid-6{
+	display: grid;
+}
+.grid-7{
+	display: grid;
+}
+.grid-8{
+	display: grid;
+}
+.grid-9{
+	display: grid;
+}
+.grid-10{
+	display: grid;
+}
+.grid-11{
+	display: grid;
+}
+.grid-12{
+	display: grid;
+}
