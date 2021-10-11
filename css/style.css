@@ -130,18 +130,71 @@ h1, h2 {
 	grid-column: 1 / 2;
 }
 
-/* 6- Grid FR y Grid Repeat */
+/* 7- Grid FR y Grid Repeat */
 .grid-7{
 	display: grid;
-}
+	/* grid-template-columns: repeat(3,33.33%); */
+	/* 3 fracciones / tamaño de fraccion de cada box */
+	/* grid-template-columns: repeat(3,1fr); */
+	/* la primer columna toma d2 fracciones y la segunda y tercer columna va tener una fracción. */
+	/* grid-template-columns:50% 25% 25% ; */
+	/* grid-template-columns: 2fr repeat(2,1fr); */
+	/*--Esta es otra alternativa Necesitamos una altura o una unidad fija obligatoria--*/
+	height:300px;
+	grid: repeat(2, 1fr) / repeat(3, 1fr);
+	/* grid: repeat(2,50rem) / repeat(3,1fr); */
 
+}
+/* No se recomienda usar PX con Grid */
+/* 8- Grid GAP */
+/* Permite hacer separacion entre columnas y filas */
 .grid-8{
 	display: grid;
+	grid: repeat(2, 20rem) / repeat(3, 1fr);
+	/* column-gap: 4rem;
+	row-gap: 4rem; */
+	gap: 4rem;
+	/* gap: 4rem 3rem; */
+}
+.grid-8 .box{
+	margin:0;
 }
 
+
+/* 9- Grid Areas */
 .grid-9{
 	display: grid;
+	height:120rem; /*Unidad Fija*/
+	grid-template-areas: "header header header"
+						 "nav nav nav"
+						 "contenido contenido sidebar"
+						 "footer footer footer"
+
+	;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 2.5fr 1.0fr 6.0fr 2.5fr;
+	gap: 2rem;
 }
+.grid-9 .box{
+	margin:0;
+}
+.grid-9 .box:nth-child(1){
+	grid-area: header;
+}
+.grid-9 .box:nth-child(2){
+	grid-area: nav;
+}
+.grid-9 .box:nth-child(3){
+	grid-area: contenido;
+}
+.grid-9 .box:nth-child(4){
+	grid-area: sidebar;
+}
+.grid-9 .box:nth-child(5){
+	grid-area: footer;
+}
+
+
 
 .grid-10{
 	display: grid;
