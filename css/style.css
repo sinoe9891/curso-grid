@@ -194,16 +194,52 @@ h1, h2 {
 	grid-area: footer;
 }
 
-
-
+/* 10- Grid Areas */
 .grid-10{
 	display: grid;
-}
+	height:120rem; /*Unidad Fija*/
+	/* areas / tamaño-row / columnas */
+	grid-template:  "header header header" 2.25fr 
+					"nav nav nav" 1.0fr
+					"contenido contenido sidebar" 6.0fr
+					"footer footer footer" 2.5fr / 1fr 1fr 1fr
 
+	;
+	gap: 2rem;
+}
+.grid-10 .box{
+	margin:0;
+}
+.grid-10 .box:nth-child(1){
+	grid-area: header;
+}
+.grid-10 .box:nth-child(2){
+	grid-area: nav;
+}
+.grid-10 .box:nth-child(3){
+	grid-area: contenido;
+}
+.grid-10 .box:nth-child(4){
+	grid-area: sidebar;
+}
+.grid-10 .box:nth-child(5){
+	grid-area: footer;
+}
+/* 11- Alineación GRID */
 .grid-11{
 	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	height:300px;
+	/* align-items: center; */
+	place-content: center;
 }
-
+/* 12-Grid Autofill y AutoFit */
+/* Autofill genera columnas mientras haya espacios */
+/* Autofit Va crear las columnas necesarias. o sea va detectar cuantos hijos hay*/
 .grid-12{
 	display: grid;
+	/* grid-template-columns: repeat(auto-fill, 200px); */
+	grid-template-columns: repeat(auto-fit, 200px);
+	/* minmax(tamaño minimo, una fracción por elemento) sirve para hacer un brake como en responsive o flex-wrap */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
